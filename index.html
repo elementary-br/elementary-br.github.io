@@ -191,11 +191,28 @@
         else {
           var entries = result.feed.entries
 
+          var titleElement = $('.posttitle').eq(0);
+          var excerptElement = $('.posttitle').eq(0).next();
+          var target = $('.main-news h3');
+
           for (var i = 0; i < 2; i++) {
             var entry = entries[i]
 
-            console.log(entry.title)
-            console.log(entry.contentSnippet)
+            var title = titleElement.clone()
+            var excerpt = excerptElement.clone()
+
+            title.children().attr({
+              href: entry.link,
+              title: entry.title,
+              target: '_blank'
+            }).text(entry.title);
+
+            excerpt.text(entry.contentSnippet);
+
+            target.after(title);
+            title.after(excerpt);
+            excerpt.after('<hr />');
+
           }
         }
       })
