@@ -53,6 +53,18 @@ nav{
   color: #fff;
   text-shadow: 2px 2px 6px rgba(66, 66, 66, 1);
 }
+@media (max-width: 640px){
+    .hero-display > .dimmer > h1 {
+        max-width: 350px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+@media (max-width: 400px){
+    .hero-display > .dimmer > h1 {
+        padding: 0 10px;
+    }
+}
 
 .main-page > section > .container > .heading {
   display: flex;
@@ -91,6 +103,30 @@ nav{
 .main-page > section > .container > .button {
   margin-left: 60px;
 }
+@media(max-width: 730px){
+
+.main-page > section > .container > .subheading,
+.main-page > section > .container > p,
+.main-page > section > .container > .posttitle
+    {
+     margin-left: 0;
+     padding: 0 40px;
+    }
+    
+    
+    .main-page > section > .container > .heading{
+       padding: 0 5px;
+       flex-direction: column;
+        margin: 0 0 15px 0;
+        text-align: center;
+    }
+    
+    .main-page > section > .container > .heading img{
+        margin: 0;
+    }
+    
+}
+
 
 .main-community {
   padding-top: 40px;
