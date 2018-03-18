@@ -3,3 +3,5 @@ www/styleguide
 www/styles
 www/package.json
 www/documentjs.json
+/vendor
+.idea
