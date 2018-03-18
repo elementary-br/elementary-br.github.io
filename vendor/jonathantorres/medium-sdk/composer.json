@@ -1,0 +1,34 @@
+{
+    "name": "jonathantorres/medium-sdk",
+    "description": "Open source SDK for integrating Medium's OAuth2 API.",
+    "keywords": ["medium", "api", "sdk"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonathan Torres",
+            "email": "jonathantorres41@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "guzzlehttp/guzzle": "^6.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.8.*",
+        "mockery/mockery": "^0.9.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "JonathanTorres\\MediumSdk\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JonathanTorres\\MediumSdk\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "scripts": {
+        "test": "phpunit"
+    }
+}
