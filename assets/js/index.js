@@ -60,7 +60,7 @@ RetornaPostsMediumHtml = function (numPosts, callback) {
 };
 
 PreencheHtmlComPosts = function (numPosts) {
-    var codigoHtml = RetornaPostsMediumHtml(numPosts, function (html) {
+    RetornaPostsMediumHtml(numPosts, function (html) {
         $("#post-area").html(html);
     });
 };
