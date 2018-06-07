@@ -93,8 +93,8 @@ img {
 *********/
 
 nav {
-    line-height: 48px;
-    min-height: 48px;
+    line-height: 52px;
+    min-height: 52px;
     min-width: 100%;
     overflow-x: auto;
     white-space: nowrap;
@@ -126,6 +126,7 @@ nav ul:first-child {
 
 nav li {
     display: inline-block;
+    font-size: 13px;
 }
 
 nav a,
@@ -259,6 +260,7 @@ footer i.fa {
     max-width: 1280px;
     display: flex;
     justify-content: space-between;
+    font-size: 12px;
 }
 
 /*********
@@ -479,10 +481,10 @@ button.active,
 button.suggested-action,
 .button.suggested-action {
     background-color: #64b9f1;
-    background-image: linear-gradient(to bottom, #75c6fd, #53abe5);
-    border-color: #4d9cd1;
+    background-image: linear-gradient(to bottom,#4ca7e4,#328ecc);
+    border-color: #337cac;
     color: #fff;
-    text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 1px rgba(0,0,0,.3);
 }
 
 .button.flat {
