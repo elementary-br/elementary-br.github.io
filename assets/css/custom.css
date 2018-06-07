@@ -1,5 +1,5 @@
 nav{
-  background-color: #1651B8;
+  background-color: rgba(22,81,184,0.98);
 }
 
 .nav-content {
@@ -8,12 +8,32 @@ nav{
   color: #fff;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
-.logomark svg {
+
+.logomark img {
   vertical-align: middle;
+  height: 30px;
+  width: 30px;
 }
 
 .nav-content .logomark path {
   fill: #fff;
+}
+
+.nav-content > div > ul > li.btnRight,
+.nav-content > div > ul > li.btnLeft {
+  display: none;
+  position: absolute;
+  width: 40px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.nav-content > div > ul > li.btnRight {
+  right: 0;
+}
+
+.nav-content > div > ul > li.btnLeft {
+  left: 0;
 }
 
 .container {
@@ -21,8 +41,35 @@ nav{
 }
 
 .container.-narrow {
-  max-width: 768px;
+  max-width: 1024px;
   margin: 0 auto;
+  padding: 0 40px;
+}
+
+@media(max-width: 910px) {
+  nav > .container {
+    flex-direction: column;
+  }
+
+  nav > .container > div {
+    display: flex;
+    justify-content: center;
+  }
+
+  nav > .container > div > ul {
+    width: auto;
+  }
+
+  nav > .container ul {
+    text-align: center;
+    overflow: auto;
+    width: 100%;
+  }
+
+  .nav-content > div > ul > li.btnRight,
+  .nav-content > div > ul > li.btnLeft {
+    display: inline-block;
+  }
 }
 
 @media(min-width: 1280px) {
@@ -53,17 +100,33 @@ nav{
   color: #fff;
   text-shadow: 2px 2px 6px rgba(66, 66, 66, 1);
 }
+
 @media (max-width: 640px){
-    .hero-display > .dimmer > h1 {
-        max-width: 350px;
-        margin: 0 auto;
-        text-align: center;
-    }
+  nav > .container > div > a {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  nav > .container > div {
+    flex-direction: column;
+  }
+
+  nav > .container > ul.social-icon-list {
+    display: none;
+  }
+
+  .hero-display > .dimmer > h1 {
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
+
 @media (max-width: 400px){
-    .hero-display > .dimmer > h1 {
-        padding: 0 10px;
-    }
+  .hero-display > .dimmer > h1 {
+    padding: 0 10px;
+  }
 }
 
 .main-page > section > .container > .heading {
@@ -74,7 +137,8 @@ nav{
 .main-page > section > .container > .heading > img {
   margin-left: -60px;
   margin-right: 12px;
-  opacity: 0.5;
+  opacity: 0.8;
+  width: 45px;
 }
 
 .main-page > section > .container > .subheading {
@@ -103,30 +167,61 @@ nav{
 .main-page > section > .container > .button {
   margin-left: 60px;
 }
+
 @media(max-width: 730px){
+  .main-page > section > .container > .subheading,
+  .main-page > section > .container > p,
+  .main-page > section > .container > .posttitle,
+  .main-page > section > .container > #post-area
+  {
+    margin-left: 0;
+    padding: 0 40px;
+  }
 
-.main-page > section > .container > .subheading,
-.main-page > section > .container > p,
-.main-page > section > .container > .posttitle
-    {
-     margin-left: 0;
-     padding: 0 40px;
-    }
-    
-    
-    .main-page > section > .container > .heading{
-       padding: 0 5px;
-       flex-direction: column;
-        margin: 0 0 15px 0;
-        text-align: center;
-    }
-    
-    .main-page > section > .container > .heading img{
-        margin: 0;
-    }
-    
+
+  .main-page > section > .container > .button {
+    margin: 24px auto;
+    display: block;
+    width: 250px;
+  }
+
+  .main-page > section > .container > .heading{
+    padding: 0 5px;
+    flex-direction: column;
+    margin: 0 0 15px 0;
+    text-align: center;
+  }
+
+  .main-page > section > .container > .heading img{
+    margin: 0;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    flex-flow: column-reverse;
+  }
+
+  .footer-content > ul {
+    text-align: center;
+  }
+
+  .footer-content > ul:not(.social-icon-list) > li:first-child {
+    width: 100%;
+    display: block;
+  }
+
+  .footer-content > ul > li > p {
+    text-align: center;
+  }
+
+  .footer-content > .social-icon-list > li > a {
+    margin-right: 20px;
+  }
+
+  .footer-content > .social-icon-list > li > a > svg {
+    transform: scale(2);
+  }
 }
-
 
 .main-community {
   padding-top: 40px;
